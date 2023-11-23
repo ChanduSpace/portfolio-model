@@ -1,0 +1,103 @@
+.projects-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--second-color);
+  scroll-snap-align: start;
+}
+.projects-corner {
+  position: absolute;
+  top: -0.3px;
+  left: 0;
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
+  background-color: var(--first-color);
+  width: 50%;
+  height: 15vh;
+}
+.project-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.projects-container {
+  height: 25rem;
+  display: flex;
+  justify-content: start;
+}
+.projects-container .card {
+  background-color: var(--first-color);
+  width: 6rem;
+  margin: 0 0.5rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+  box-shadow: 0 0 5px rgb(43, 43, 43);
+  transition: all 0.7s cubic-bezier(0.31, -0.32, 0.52, 1.25);
+  -webkit-transition: all 0.7s cubic-bezier(0.31, -0.32, 0.52, 1.25);
+  -moz-transition: all 0.7s cubic-bezier(0.31, -0.32, 0.52, 1.25);
+  -ms-transition: all 0.7s cubic-bezier(0.31, -0.32, 0.52, 1.25);
+  -o-transition: all 0.7s cubic-bezier(0.31, -0.32, 0.52, 1.25);
+}
+.projects-container input {
+  display: none;
+}
+input:checked + .card {
+  width: 36rem;
+}
+.dhoni-image img,
+.earth-image img,
+.flipkart-image img,
+.youtube-image img {
+  height: 17.45rem;
+}
+.dhoni-image,
+.earth-image,
+.flipkart-image,
+.youtube-image {
+  display: block;
+}
+.discription {
+  padding: 5px;
+  color: var(--fourth-color);
+}
+.graph-png {
+  position: absolute;
+  bottom: 0;
+  height: 44vh;
+  width: 100vw;
+  object-fit: cover;
+  opacity: 0.5;
+}
+.dot-png {
+  position: absolute;
+  height: 12vh;
+  left: 53px;
+  top: 73px;
+  width: 15vw;
+  object-fit: cover;
+  opacity: 0.2;
+  z-index: 10;
+}
+.dot-png-2 {
+  position: absolute;
+  height: 28vh;
+  right: 53px;
+  top: 73px;
+  width: 5vw;
+  object-fit: cover;
+  opacity: 0.2;
+  z-index: 10;
+}
+@media screen and (max-width: 700px) {
+  .projects-section {
+    display: none;
+  }
+}
